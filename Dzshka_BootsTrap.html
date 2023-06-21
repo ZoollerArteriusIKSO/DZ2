@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Админ-Панель</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container mt-5">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="product-tab" data-toggle="tab" href="#product" role="tab" aria-controls="product"
+          aria-selected="true">Создание товара</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="category-tab" data-toggle="tab" href="#category" role="tab" aria-controls="category"
+          aria-selected="false">Создание категории товаров</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="order-tab" data-toggle="tab" href="#order" role="tab" aria-controls="order"
+          aria-selected="false">Создание заказа</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="email-tab" data-toggle="tab" href="#email" role="tab" aria-controls="email"
+          aria-selected="false">Отправка сообщения по емейлу</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="sms-tab" data-toggle="tab" href="#sms" role="tab" aria-controls="sms"
+          aria-selected="false">Отправка СМС сообщения</a>
+      </li>
+    </ul>
+
+    <div class="tab-content mt-3" id="myTabContent">
+      <div class="tab-pane fade show active" id="product" role="tabpanel" aria-labelledby="product-tab">
+        <form id="product-form">
+          <div class="form-group">
+            <label for="product-name">Название товара</label>
+            <input type="text" class="form-control" id="product-name" name="product-name" required>
+          </div>
+          <div class="form-group">
+            <label for="product-name">Цена товара</label>
+            <input type="text" class="form-control" id="product-name" name="product-name" required>
+          </div>
+          <div class="form-group">
+            <label for="product-name">Популярность товара</label>
+            <input type="text" class="form-control" id="product-name" name="product-name" required>
+          </div>
+          <div class="form-group">
+            <label for="product-name">Колово товаров</label>
+            <input type="text" class="form-control" id="product-name" name="product-name" required>
+          </div>
+          <div class="form-group">
+            <label for="product-name">Описание товара</label>
+            <input type="text" class="form-control" id="product-name" name="product-name" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Создать товар</button>
+        </form>
+      </div>
+
+      <div class="tab-pane fade" id="category" role="tabpanel" aria-labelledby="category-tab">
+        <form id="category-form">
+          <div class="form-group">
+            <label for="category-name">Название категории</label>
+            <input type="text" class="form-control" id="category-name" name="category-name" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Создать категорию</button>
+        </form>
+      </div>
+
+      <div class="tab-pane fade" id="order" role="tabpanel" aria-labelledby="order-tab">
+        <form id="order-form">
+          <div class="form-group">
+            <label for="order-name">Название заказа</label>
+            <input type="text" class="form-control" id="order-name" name="order-name" required>
+          </div>
+          <div class="form-group">
+            <label for="order-name">Колово товаров</label>
+            <input type="text" class="form-control" id="order-name" name="order-name" required>
+          </div>
+          <div class="form-group">
+            <label for="order-name">Адрес</label>
+            <input type="text" class="form-control" id="order-name" name="order-name" required>
+          </div>
+          <div class="form-group">
+            <label for="order-name">Цена</label>
+            <input type="text" class="form-control" id="order-name" name="order-name" required>
+          </div>
+          <div class="form-group">
+            <label for="order-name">Доп-тробования</label>
+            <input type="text" class="form-control" id="order-name" name="order-name">
+          </div>
+          <button type="submit" class="btn btn-primary">Создать заказ</button>
+        </form>
+      </div>
+
+      <div class="tab-pane fade" id="email" role="tabpanel" aria-labelledby="email-tab">
+        <form id="email-form">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="email-message">Сообщение</label>
+            <textarea class="form-control" id="email-message" name="email-message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Отправить email</button>
+        </form>
+      </div>
+
+      <div class="tab-pane fade" id="sms" role="tabpanel" aria-labelledby="sms-tab">
+        <form id="sms-form">
+          <div class="form-group">
+            <label for="phone">Номер телефона</label>
+            <input type="text" class="form-control" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="sms-message">Сообщение</label>
+            <textarea class="form-control" id="sms-message" name="sms-message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Отправить СМС</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <script>
+
+    $(document).ready(function () {
+ 
+      $('#product-form').validate();
+
+
+      $('#category-form').validate();
+
+
+      $('#order-form').validate();
+
+
+      $('#email-form').validate();
+
+  
+      $('#sms-form').validate();
+
+      $('#phone').inputmask({
+        mask: '+9(999)999-9999',
+        greedy: false,
+        placeholder: ' ',
+        clearMaskOnLostFocus: false
+      });
+    });
+  </script>
+</body>
+
+</html>
